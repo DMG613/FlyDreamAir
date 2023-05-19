@@ -29,9 +29,18 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
         jPanel_Customer_Main = new javax.swing.JPanel();
         jTabbedPane_CustomerMainTabs = new javax.swing.JTabbedPane();
         jPanel_BookFlights = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jScrollPane_AvailableFlights = new javax.swing.JScrollPane();
+        jList_Flights = new javax.swing.JList<>();
         jPanel_BookTicket = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jButton_SelectFlight = new javax.swing.JButton();
         jPanel_ManageFlights = new javax.swing.JPanel();
         jPanel_InFlightServices = new javax.swing.JPanel();
@@ -49,46 +58,116 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
 
         jTabbedPane_CustomerMainTabs.setBorder(javax.swing.BorderFactory.createTitledBorder("Customer Portal"));
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Available Flights"));
+        jScrollPane_AvailableFlights.setBorder(javax.swing.BorderFactory.createTitledBorder("Available Flights"));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        jList_Flights.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Flight Number: (00001) Capacity: (208) Departure: SYDNEY Destination: BRISBANE", "Flight Number: (00002) Capacity: (174) Departure: BRISBANE Destination: MELBOURNE", "Flight Number: (00003) Capacity: (134) Departure: HOBART Destination: AUCKLAND", "Flight Number: (00004) Capacity: (227) Departure: SYDNEY Destination: LONDON", "Flight Number: (00005) Capacity: (189) Departure: TOKYO Destination: SHANGHAI", "Flight Number: (00006) Capacity: (208) Departure: AMSTERDAM Destination: MOSCOW", "Flight Number: (00007) Capacity: (200) Departure: MADRID Destination: ROME", "Flight Number: (00008) Capacity: (95) Departure: WOLLONGONG Destination: MELBOURNE" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jList_Flights.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane_AvailableFlights.setViewportView(jList_Flights);
 
         jPanel_BookTicket.setBorder(javax.swing.BorderFactory.createTitledBorder("Book Ticket"));
+
+        jLabel3.setText("Selected Flight Details:");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel4.setText("FLIGHT NUMBER:");
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel5.setText("00001");
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel6.setText("DEPARTURE:");
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel7.setText("SYDNEY");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel8.setText("DESTINATION:");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel9.setText("BRISBANE");
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel10.setText("CAPACITY:");
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel11.setText("208");
 
         javax.swing.GroupLayout jPanel_BookTicketLayout = new javax.swing.GroupLayout(jPanel_BookTicket);
         jPanel_BookTicket.setLayout(jPanel_BookTicketLayout);
         jPanel_BookTicketLayout.setHorizontalGroup(
             jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
+                    .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(102, 102, 102))
         );
         jPanel_BookTicketLayout.setVerticalGroup(
             jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 221, Short.MAX_VALUE)
+            .addGroup(jPanel_BookTicketLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_BookTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
 
         jButton_SelectFlight.setText("Purchase a Ticket For This Flight");
+        jButton_SelectFlight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SelectFlightActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_BookFlightsLayout = new javax.swing.GroupLayout(jPanel_BookFlights);
         jPanel_BookFlights.setLayout(jPanel_BookFlightsLayout);
         jPanel_BookFlightsLayout.setHorizontalGroup(
             jPanel_BookFlightsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel_BookTicket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane_AvailableFlights)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_BookFlightsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton_SelectFlight, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+                .addComponent(jButton_SelectFlight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel_BookFlightsLayout.setVerticalGroup(
             jPanel_BookFlightsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_BookFlightsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane_AvailableFlights, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton_SelectFlight)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -101,11 +180,11 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
         jPanel_ManageFlights.setLayout(jPanel_ManageFlightsLayout);
         jPanel_ManageFlightsLayout.setHorizontalGroup(
             jPanel_ManageFlightsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 618, Short.MAX_VALUE)
         );
         jPanel_ManageFlightsLayout.setVerticalGroup(
             jPanel_ManageFlightsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 423, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane_CustomerMainTabs.addTab("Manage Flights", jPanel_ManageFlights);
@@ -114,11 +193,11 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
         jPanel_InFlightServices.setLayout(jPanel_InFlightServicesLayout);
         jPanel_InFlightServicesLayout.setHorizontalGroup(
             jPanel_InFlightServicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 618, Short.MAX_VALUE)
         );
         jPanel_InFlightServicesLayout.setVerticalGroup(
             jPanel_InFlightServicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 423, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane_CustomerMainTabs.addTab("In-Flight Services", jPanel_InFlightServices);
@@ -127,11 +206,11 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
         jPanel_CustomerSettings.setLayout(jPanel_CustomerSettingsLayout);
         jPanel_CustomerSettingsLayout.setHorizontalGroup(
             jPanel_CustomerSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 618, Short.MAX_VALUE)
         );
         jPanel_CustomerSettingsLayout.setVerticalGroup(
             jPanel_CustomerSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 423, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane_CustomerMainTabs.addTab("Account Settings", jPanel_CustomerSettings);
@@ -218,7 +297,7 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel_Login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(330, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -230,7 +309,7 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel_Login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(485, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -259,6 +338,11 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton_SelectFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SelectFlightActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton_SelectFlightActionPerformed
 
 
     
@@ -302,8 +386,17 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_SelectFlight;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList_Flights;
     private javax.swing.JPanel jPanel_BookFlights;
     private javax.swing.JPanel jPanel_BookTicket;
     private javax.swing.JPanel jPanel_CustomerSettings;
@@ -312,7 +405,7 @@ public class FlyDreamAirUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Login;
     private javax.swing.JPanel jPanel_ManageFlights;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane_AvailableFlights;
     private javax.swing.JTabbedPane jTabbedPane_CustomerMainTabs;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
