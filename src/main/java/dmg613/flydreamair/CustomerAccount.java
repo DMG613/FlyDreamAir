@@ -4,10 +4,9 @@
  */
 package dmg613.flydreamair;
 
-/**
- *
- * @author decla
- */
+
 public class CustomerAccount {
     
+    String username;
+    String password;
 }

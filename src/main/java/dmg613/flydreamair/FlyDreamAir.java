@@ -1,11 +1,11 @@
 package dmg613.flydreamair;
+import java.util.*;
 
 
 public class FlyDreamAir {
+    
+    ArrayList<CustomerAccount> customers = new ArrayList<CustomerAccount>();
 
-    public static void main(String[] args) {
-        
-    }
     
     public static void generateTestData(){
         
@@ -43,4 +43,21 @@ public class FlyDreamAir {
         
         flight1.printPassengerList();
     }
+    
+    // Returns user within company where login matches
+    public CustomerAccount checkLogin(String username, String password){
+        
+        for(CustomerAccount u: customers){
+            if (u.username.equals(username)){
+                
+                if(u.password.equals(password)){
+                    return u;
+                }
+            } 
+        }
+        return null;
+    }
+    
+    
+    
 }
