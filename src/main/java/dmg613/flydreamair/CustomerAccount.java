@@ -4,9 +4,15 @@
  */
 package dmg613.flydreamair;
 
-
+import java.util.*;
 public class CustomerAccount {
     
     String username;
     String password;
+    ArrayList<Ticket> tickets = new ArrayList<Ticket>();
+    
+    public CustomerAccount(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
 }
