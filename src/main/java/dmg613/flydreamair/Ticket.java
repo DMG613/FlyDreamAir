@@ -7,6 +7,7 @@ public class Ticket {
     
     private String passengerName;
     private int seatNumber;
+    // 
 
     // Constructor
     public Ticket(String passengerName, int seatNumber) {
