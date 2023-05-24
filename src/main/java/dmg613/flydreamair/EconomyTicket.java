@@ -7,5 +7,4 @@ public class EconomyTicket extends Ticket {
     public EconomyTicket(String passengerName, int seatNumber) {
         super(passengerName, seatNumber);
     }
-    
 }
